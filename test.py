@@ -1,5 +1,5 @@
-t = [-1] * 10
+t = [0] * 10
 print(t)
-for i in range(1, 10):
+for i in range(0,6,2):
     t[i] = i
 print(t)

@@ -21,7 +21,7 @@ for j in range(count) :
 
 if res > 0 :
     code[res-1] ^= 1
-    print(str(res) + "번째 비트열에 에러 발생. 수정된 코드: "+ "".join(map(str,code))) 
+    print(str(res) + "번째 비트에 에러 발생. 수정된 코드: "+ "".join(map(str,code))) 
 else :
     print("에러없음")  
 
