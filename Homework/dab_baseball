@@ -1,0 +1,32 @@
+import random
+import sys
+
+def make_random_number() :
+    ans_list = random.sample(range(1,9),3)
+    random.shuffle(ans_list)
+    return ans_list
+
+def check_strike_ball(secret_number, answer_number) :
+    sb_list = [0,0]
+    for i in range(0,len(ans_list)) :
+        for j in range(0,len(usr_list)) :
+            if(i == j and ans_list[i] == usr_list[j]) :
+                sb_list[0] += 1
+            elif(i != j and ans_list[i] == usr_list[j]):
+                sb_list[1] += 1
+    return sb_list
+    
+ans_list = make_random_number()
+trial = 0
+while 1 :
+    print("enter your answer:")
+    a = sys.stdin.readline().strip()
+    usr_list= list(map(int, map(str, a)))
+    sb_list = check_strike_ball(ans_list,usr_list)
+    print("Your anser is", usr_list)
+    print(sb_list[0],"strike and",sb_list[1],"ball")
+    trial+=1
+    if sb_list[0] == 3:
+        break
+print("\nThe number of trials is", trial)
+print("The answer is",ans_list)
