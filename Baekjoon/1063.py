@@ -2,7 +2,7 @@ from sys import stdin
 
 def R(state,i):
     if state[i][0] == 'H':
-        if i == 1:
+        if i == 1: #돌의 위치가 끝이면 킹의 위치 원상복귀
             L(state,i-1)
             return
         return

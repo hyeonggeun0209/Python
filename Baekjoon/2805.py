@@ -1,4 +1,5 @@
 from sys import stdin
+
 def binary_search(list, M):
     first, last = 0, len(list)
     max = 0
@@ -18,7 +19,7 @@ def binary_search(list, M):
             max = list[mid]
             first = mid 
         else:
-            last = mid 
+            last = mid
     while first <= last:
         tree = 0.0
         mid = (first + last) // 2
