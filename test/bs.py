@@ -19,7 +19,7 @@ for i in img:
         with open('./images/img' + str(n)+'.jpg','wb') as h: # w - write b - binary
             img = f.read()
             h.write(img)
-    n += 1
+    n += 1 
     if n > crawl_num:
         break
     
